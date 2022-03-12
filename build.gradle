@@ -1,12 +1,14 @@
 plugins {
     id 'java'
     id "io.freefair.lombok" version "6.4.1"
+    id 'maven-publish'
 }
 
 group 'art.arcane'
 version '1.0.0'
 
 repositories {
+    maven { url "https://dl.cloudsmith.io/public/arcane/archive/maven/" }
     mavenCentral()
 }
 
@@ -16,4 +18,24 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+    repositories {
+        maven {
+            name = "cloudsmith"
+            version = System.getenv("CLOUDSMITH_VERSION")
+            url = "https://maven.cloudsmith.io/arcane/archive/"
+            url = "https://maven.cloudsmith.io/arcane/archive/"
+            credentials {
+                username = System.getenv("CLOUDSMITH_USERNAME")
+                password = System.getenv("CLOUDSMITH_PASSWORD")
+            }
+        }
+    }
 }
