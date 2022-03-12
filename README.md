@@ -1,6 +1,20 @@
 # GSocks
 Simple Client &amp; Server socket server for serializing objects based on gson
 
+## Get It
+
+```gradle
+repositories {
+    maven { url "https://dl.cloudsmith.io/public/arcane/archive/maven/" }
+}
+```
+
+```gradle
+dependencies {
+    implementation 'art.arcane:GSocks:<VERSION>'
+}
+```
+
 ## An example packet
 These should be shared in both client & server projects 
 
