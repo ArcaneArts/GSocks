@@ -1,6 +1,8 @@
 # GSocks
 Simple Client &amp; Server socket server for serializing objects based on gson
 
+[![Latest version of 'Amulet' @ Cloudsmith](https://api-prd.cloudsmith.io/v1/badges/version/arcane/archive/maven/GSocks/latest/a=noarch;xg=art.arcane/?render=true&show_latest=true)](https://cloudsmith.io/~arcane/repos/archive/packages/detail/maven/GSocks/latest/a=noarch;xg=art.arcane/)
+
 ## Get It
 
 ```gradle
