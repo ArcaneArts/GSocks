@@ -1,7 +1,7 @@
 # GSocks
 Simple Client &amp; Server socket server for serializing objects based on gson
 
-## An example packet
+## An example packet 
 These should be shared in both client & server projects 
 
 ```java
